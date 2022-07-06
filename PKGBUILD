@@ -51,7 +51,7 @@ source=(
     'swift-nio-ssl::git+https://github.com/apple/swift-nio-ssl#commit=2.15.0'
     'swift-tools-support-core::git+https://github.com/apple/swift-tools-support-core#branch=main'
     'swift-xcode-playground-support::git+https://github.com/apple/swift-xcode-playground-support#branch=main'
-    'ninja:git+https://github.com/ninja-build/ninja'
+    'ninja:git+git+https://github.com/ninja-build/ninja'
 )
 noextract=()
 md5sums=(
