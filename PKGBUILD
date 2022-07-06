@@ -52,9 +52,11 @@ source=(
     'swift-tools-support-core::git+https://github.com/apple/swift-tools-support-core#branch=main'
     'swift-xcode-playground-support::git+https://github.com/apple/swift-xcode-playground-support#branch=main'
     'ninja::git+https://github.com/ninja-build/ninja'
+    'icu::git+https://github.com/unicode-org/icu#tag=release-71-1'
 )
 noextract=()
 md5sums=(
+    'SKIP'
     'SKIP'
     'SKIP'
     'SKIP'
