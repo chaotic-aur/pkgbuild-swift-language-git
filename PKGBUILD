@@ -130,7 +130,6 @@ build() {
     export SWIFT_BUILD_ROOT="$srcdir"/build
     export SWIFT_INSTALL_DIR="$srcdir"/install
     export INSTALLABLE_PACKAGE="$srcdir"/swift.tar.gz
-    export CC="/usr/bin/clang"
 
     cd "$srcdir/build"
     python "$srcdir"/swift/utils/build-script --preset=buildbot_linux,no_test install_destdir="$SWIFT_INSTALL_DIR"  installable_package="$INSTALLABLE_PACKAGE"
