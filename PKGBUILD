@@ -127,11 +127,12 @@ build() {
     # Which will break `compiler-rt`
     unset CPPFLAGS
     export DISTCC_HOSTS='--randomize localhost red,cpp,lzo green,cpp,lzo blue,cpp,lzo'
+
     export SWIFT_BUILD_ROOT="$srcdir"/build
     export SWIFT_INSTALL_DIR="$srcdir"/install
     export INSTALLABLE_PACKAGE="$srcdir"/swift.tar.gz
+    alias clang++='clang++ -v -I "$srcdir/llvm-project/clang/include"'
     CPLUS_INCLUDE_PATH="$SRCDIR"/llvm-project/clang/include:${CPLUS_INCLUDE_PATH}
-    export CPPFLAGS="-I $srcdir/llvm-project/clang/include"
 
     cd "$srcdir/build"
     python "$srcdir"/swift/utils/build-script --preset=buildbot_linux,no_test install_destdir="$SWIFT_INSTALL_DIR"  installable_package="$INSTALLABLE_PACKAGE"
