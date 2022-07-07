@@ -130,7 +130,7 @@ build() {
     export SWIFT_BUILD_ROOT="$srcdir"/build
     export SWIFT_INSTALL_DIR="$srcdir"/install
     export INSTALLABLE_PACKAGE="$srcdir"/swift.tar.gz
-    CPLUS_INCLUDE_PATH="$SRCDIR"/llvm-project/clang/include:${CPP_INCLUDE_PATH}
+    CPLUS_INCLUDE_PATH="$SRCDIR"/llvm-project/clang/include:${CPLUS_INCLUDE_PATH}
     export CPPFLAGS="-I $srcdir/llvm-project/clang/include"
 
     cd "$srcdir/build"
